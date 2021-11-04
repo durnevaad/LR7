@@ -1,0 +1,32 @@
+﻿<title>Дурнева А.Д.</title>
+<b>Задание №6</b><br>
+<b>*-поля, обязательные для заполнения</b><br><br>
+<html> <head>
+<script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function proverka () {
+            var pas1 = document.querySelector('#pass'),
+                pas2 = document.querySelector('#passw')
+            pas1.addEventListener('input', function (a) {
+                this.value != pas2.value ? pas2.setCustomValidity('Пароль не совпадает') : pas2.setCustomValidity('')
+            })
+            pas2.addEventListener('input', function (b) {
+                this.value != pas1.value ? this.setCustomValidity('Пароль не совпадает') : this.setCustomValidity('')
+            })
+        })
+</script>
+</head>
+<form name="f" onsubmit="return proverka()">
+Ваше имя*<input type="gav" name="name" size=15 required> <br/><br>
+Пароль*<input id="pass" name="pass" type="gav" minlength = "4" size=10 required> <br><br>
+Потверждение пароля*<input id="passw" name="passw" type="gav" minlength = "4" size=10 required> <br/><br>
+Email*<input type="gav" required><br><br>
+Тема сообщения*<input type="gav" size=15 required><br><br>
+Сообщение:<br><textarea minlength = "10" required></textarea> <br><br>
+<input type="submit" value="Отправить">
+<input type="reset" value="Очистить">
+<style>
+        input[type=gav]:invalid{
+           border: solid 1px red;}
+</style>
+</form> </body> </html>
+<p><a href="navigat.php">Вернуться назад</a></p>

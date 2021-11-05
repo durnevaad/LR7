@@ -16,16 +16,16 @@
 </script>
 </head>
 <form name="f" onsubmit="return proverka()">
-Ваше имя*<input type="gav" name="name" size=15 required> <br/><br>
-Пароль*<input id="pass" name="pass" type="gav" minlength = "4" size=10 required> <br><br>
-Потверждение пароля*<input id="passw" name="passw" type="gav" minlength = "4" size=10 required> <br/><br>
-Email*<input type="gav" required><br><br>
-Тема сообщения*<input type="gav" size=15 required><br><br>
+Ваше имя*<input name="gav" size=15 required> <br/><br>
+Пароль*<input id="pass" name="gav" minlength = "4" size=10 required> <br><br>
+Потверждение пароля*<input id="passw" name="gav" minlength = "4" size=10 required> <br/><br>
+Email*<input id="email" name="gav" type="email" required><br><br>
+Тема сообщения*<input name="gav" size=15 required><br><br>
 Сообщение:<br><textarea minlength = "10" required></textarea> <br><br>
 <input type="submit" value="Отправить">
 <input type="reset" value="Очистить">
 <style>
-        input[type=gav]:invalid{
+        input[name=gav]:invalid{
            border: solid 1px red;}
 </style>
 </form> </body> </html>
